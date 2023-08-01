@@ -4,13 +4,13 @@ import { BigDecimal, Address } from '@graphprotocol/graph-ts/index'
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from './helpers'
 
 const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
-const axlUSDC_WETH_PAIR = '0x86cd8533b0166BDcF5d366A3Bb0c3465E56D3ad5' // created block 2033837
+const axlUSDC_WETH_PAIR = '0x86cd8533b0166bdcf5d366a3bb0c3465e56d3ad5' // created block 2033837
 // const DAI_WETH_PAIR = '0xf3010261b58b2874639ca2e860e9005e3be5de0b'  // created block 481116
-const axlUSDT_WETH_PAIR = '0x2c6DD12a8Af25eC190ED7aa8304DDf17fc9DC57c' // created block 2055979
+const axlUSDT_WETH_PAIR = '0x2c6dd12a8af25ec190ed7aa8304ddf17fc9dc57c' // created block 2055979
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
-  let usdtPair = Pair.load(axlUSDT_WETH_PAIR) // dai is token1
+  let usdtPair = Pair.load(axlUSDT_WETH_PAIR) // usdt is token1
   let usdcPair = Pair.load(axlUSDC_WETH_PAIR) // usdc is token1
 
   // dai and USDC have been created
